@@ -8,7 +8,7 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 import '../../infrastructure/{{#snakeCase}}{{name}}{{/snakeCase}}/{{#snakeCase}}{{name}}{{/snakeCase}}_entity.dao.dart';
 
 part '{{#snakeCase}}{{name}}{{/snakeCase}}_state.dart';
-part '{{#snakeCase}}{{name}}{{/snakeCase}}.freezed.dart';
+part '{{#snakeCase}}{{name}}{{/snakeCase}}_cubit.freezed.dart';
 
 class {{#pascalCase}}{{name}}{{/pascalCase}}Cubit extends Cubit<{{#pascalCase}}{{name}}{{/pascalCase}}State> {{#isHydrated}}with HydratedMixin {{/isHydrated}}{
   {{#pascalCase}}{{name}}{{/pascalCase}}Cubit(
