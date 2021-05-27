@@ -4,6 +4,14 @@ Frequently used bricks for Flutter (from Mason)
 ## Feature
 ***depends on bloc, injectable, get it, and freezed***
 
+Import to mason.yaml:
+```yaml
+feature:
+  git:
+    url: git@github.com:mrgnhnt96/quick_bricks.git
+    path: flutter/feature
+```
+
 Params: 
  - name
  - path
@@ -37,6 +45,14 @@ Already has cubit depending on repo, and the cubit is being provided to the scre
 ## Cubit
 ***depends on bloc (hydrated bloc?) and freezed***
 
+Import to mason.yaml:
+```yaml
+cubit:
+  git:
+    url: git@github.com:mrgnhnt96/quick_bricks.git
+    path: flutter/cubit
+```
+
 Params: 
  - name
  - isHydrated
@@ -54,6 +70,14 @@ new_feature
 
 ## Repo
 ***depends on injectable***
+
+Import to mason.yaml:
+```yaml
+repo:
+  git:
+    url: git@github.com:mrgnhnt96/quick_bricks.git
+    path: flutter/repo
+```
 
 Params: 
  - name
