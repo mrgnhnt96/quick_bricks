@@ -16,7 +16,7 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}Cubit extends Cubit<{{#pascalCase}}{
   ) : super(const {{#pascalCase}}{{name}}{{/pascalCase}}State.ready());
 
   // ignore: unused_field
-  final I{{#pascalCase}}{{name}}{{/pascalCase}}Repo _{{#snakeCase}}{{name}}{{/snakeCase}}Repo;
+  final I{{#pascalCase}}{{name}}{{/pascalCase}}Repo _{{#camelCase}}{{name}}{{/camelCase}}Repo;
 
   {{#isHydrated}}
   @override
