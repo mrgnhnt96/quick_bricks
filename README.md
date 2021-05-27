@@ -1,5 +1,5 @@
 # Quick Bricks
-Frequently used bricks for Flutter (from Mason)
+Frequently used bricks for Flutter (from [Mason](https://pub.dev/packages/mason))
 
 ## Feature
 ***depends on bloc, injectable, get it, and freezed***
