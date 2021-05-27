@@ -1,0 +1,6 @@
+name: cubit
+description: A new brick created with the Mason CLI.
+vars:
+  - name
+  - isHydrated
+  - path
