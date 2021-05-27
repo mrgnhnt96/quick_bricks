@@ -12,7 +12,7 @@ part '{{#snakeCase}}{{name}}{{/snakeCase}}.freezed.dart';
 
 class {{#pascalCase}}{{name}}{{/pascalCase}}Cubit extends Cubit<{{#pascalCase}}{{name}}{{/pascalCase}}State> {{#isHydrated}}with HydratedMixin {{/isHydrated}}{
   {{#pascalCase}}{{name}}{{/pascalCase}}Cubit(
-    @Named.from({{#pascalCase}}{{name}}{{/pascalCase}}Entity) this._{{#snakeCase}}{{name}}{{/snakeCase}}Repo,
+    @Named.from({{#pascalCase}}{{name}}{{/pascalCase}}Entity) this._{{#camelCase}}{{name}}{{/camelCase}}Repo,
   ) : super(const {{#pascalCase}}{{name}}{{/pascalCase}}State.ready());
 
   // ignore: unused_field
