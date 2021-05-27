@@ -1,6 +1,4 @@
-import 'package:injectable/injectable.dart';
-
-import './{{#snakeCase}}{{name}}{{/snakeCase}}_interface.dart';
+part of '{{#snakeCase}}{{name}}{{/snakeCase}}_entity.dao.dart';
 
 @named
 @Injectable(as: I{{#pascalCase}}{{name}}{{/pascalCase}}Repo)

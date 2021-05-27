@@ -1,9 +1,9 @@
 // ignore_for_file: unused_field
 import 'package:injectable/injectable.dart';
 
-import './{{#snakeCase}}{{name}}{{/snakeCase}}_cache.dao.dart';
-import './{{#snakeCase}}{{name}}{{/snakeCase}}_interface.dart';
-import './{{#snakeCase}}{{name}}{{/snakeCase}}_source.dao.dart';
+part '{{#snakeCase}}{{name}}{{/snakeCase}}_cache.dao.dart';
+part '{{#snakeCase}}{{name}}{{/snakeCase}}_interface.dart';
+part '{{#snakeCase}}{{name}}{{/snakeCase}}_source.dao.dart';
 
 @named
 @Injectable(as: I{{#pascalCase}}{{name}}{{/pascalCase}}Repo)
