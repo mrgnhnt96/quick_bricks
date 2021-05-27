@@ -18,6 +18,8 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}Cubit extends Cubit<{{#pascalCase}}{
   // ignore: unused_field
   final I{{#pascalCase}}{{name}}{{/pascalCase}}Repo _{{#camelCase}}{{name}}{{/camelCase}}Repo;
 
+  void init(){}
+
   {{#isHydrated}}
   @override
   {{#pascalCase}}{{name}}{{/pascalCase}}State? fromJson(Map<String, dynamic> json) =>
