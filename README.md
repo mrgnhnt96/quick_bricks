@@ -62,7 +62,6 @@ Params:
 ```
 new_feature
 ├── new_feature_cubit.dart
-├── new_feature_cubit.freezed.dart
 └── new_feature_state.dart
 ```
 
