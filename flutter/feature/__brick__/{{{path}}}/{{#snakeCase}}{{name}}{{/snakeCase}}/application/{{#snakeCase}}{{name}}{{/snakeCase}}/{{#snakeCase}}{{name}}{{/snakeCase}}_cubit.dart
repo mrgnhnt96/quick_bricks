@@ -9,7 +9,11 @@ import '../../infrastructure/{{#snakeCase}}{{name}}{{/snakeCase}}/{{#snakeCase}}
 
 part '{{#snakeCase}}{{name}}{{/snakeCase}}_state.dart';
 part '{{#snakeCase}}{{name}}{{/snakeCase}}_cubit.freezed.dart';
+{{#isHydrated}}
+part '{{#snakeCase}}{{name}}{{/snakeCase}}_cubit.g.dart';
+{{/isHydrated}}
 
+@injectable
 class {{#pascalCase}}{{name}}{{/pascalCase}}Cubit extends Cubit<{{#pascalCase}}{{name}}{{/pascalCase}}State> {{#isHydrated}}with HydratedMixin {{/isHydrated}}{
   {{#pascalCase}}{{name}}{{/pascalCase}}Cubit(
     @Named.from({{#pascalCase}}{{name}}{{/pascalCase}}Entity) this._{{#camelCase}}{{name}}{{/camelCase}}Repo,

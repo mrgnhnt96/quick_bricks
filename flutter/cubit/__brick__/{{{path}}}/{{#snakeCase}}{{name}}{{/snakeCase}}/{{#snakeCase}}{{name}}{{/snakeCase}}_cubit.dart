@@ -6,6 +6,9 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 
 part '{{#snakeCase}}{{name}}{{/snakeCase}}_state.dart';
 part '{{#snakeCase}}{{name}}{{/snakeCase}}_cubit.freezed.dart';
+{{#isHydrated}}
+part '{{#snakeCase}}{{name}}{{/snakeCase}}_cubit.g.dart';
+{{/isHydrated}}
 
 class {{#pascalCase}}{{name}}{{/pascalCase}}Cubit extends Cubit<{{#pascalCase}}{{name}}{{/pascalCase}}State> {{#isHydrated}} with HydratedMixin {{/isHydrated}}{
   {{#pascalCase}}{{name}}{{/pascalCase}}Cubit() : super(const {{#pascalCase}}{{name}}{{/pascalCase}}State.ready());
