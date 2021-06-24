@@ -1,4 +1,3 @@
-import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 {{#is_hydrated}}
@@ -14,7 +13,10 @@ part '{{#snakeCase}}{{name}}{{/snakeCase}}_cubit.g.dart';
 
 @injectable
 class {{#pascalCase}}{{name}}{{/pascalCase}}Cubit extends {{#is_hydrated}}Cache{{/is_hydrated}}Cubit<{{#pascalCase}}{{name}}{{/pascalCase}}State>{
-  {{#pascalCase}}{{name}}{{/pascalCase}}Cubit() : super(const {{#pascalCase}}{{name}}{{/pascalCase}}State.loading());
+  {{#pascalCase}}{{name}}{{/pascalCase}}Cubit({{!
+  }}{{#dependencies}}
+  {{#isRepo}}@Named.from({{#pascalCase}}{{n}}{{/pascalCase}}Entity){{/isRepo}} this.{{#camelCase}}{{n}}{{/camelCase}}
+  {{/dependencies}}) : super(const {{#pascalCase}}{{name}}{{/pascalCase}}State.loading());
 
   void init() async {}
 
