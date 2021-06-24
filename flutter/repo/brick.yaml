@@ -2,4 +2,5 @@ name: repo
 description: Creates a new repo
 vars:
   - name
-  - path
+  - feature_path
+  - interface_name
