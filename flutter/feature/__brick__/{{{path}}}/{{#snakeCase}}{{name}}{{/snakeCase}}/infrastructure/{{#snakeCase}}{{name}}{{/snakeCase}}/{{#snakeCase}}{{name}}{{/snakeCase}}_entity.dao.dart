@@ -8,7 +8,7 @@ part '{{#snakeCase}}{{name}}{{/snakeCase}}_cache.dao.dart';
 part '{{#snakeCase}}{{name}}{{/snakeCase}}_source.dao.dart';
 
 @named
-@Injectable(as: I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Entity)
+@Injectable(as: I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Repo)
 class {{#pascalCase}}{{name}}{{/pascalCase}}Entity extends I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Entity {
   {{#pascalCase}}{{name}}{{/pascalCase}}Entity(
     @Named.from({{#pascalCase}}{{name}}{{/pascalCase}}Cache) I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Cache _cache,
