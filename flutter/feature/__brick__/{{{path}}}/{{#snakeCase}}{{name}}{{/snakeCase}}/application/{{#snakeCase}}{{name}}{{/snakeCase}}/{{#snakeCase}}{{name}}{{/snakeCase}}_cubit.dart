@@ -1,37 +1,30 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-{{#isHydrated}}
 import 'package:injectable/injectable.dart';
-import 'package:hydrated_bloc/hydrated_bloc.dart';
-{{/isHydrated}}
+{{#is_hydrated}}
+import 'package:clean_simple_eats/features/cache_keys/domain/cache_cubit/cache_cubit.i.dart';
+{{/is_hydrated}}
 
-import '../../infrastructure/{{#snakeCase}}{{name}}{{/snakeCase}}/{{#snakeCase}}{{name}}{{/snakeCase}}_entity.dao.dart';
 
 part '{{#snakeCase}}{{name}}{{/snakeCase}}_state.dart';
 part '{{#snakeCase}}{{name}}{{/snakeCase}}_cubit.freezed.dart';
-{{#isHydrated}}
+{{#is_hydrated}}
 part '{{#snakeCase}}{{name}}{{/snakeCase}}_cubit.g.dart';
-{{/isHydrated}}
+{{/is_hydrated}}
 
-{{#isHydrated}}
 @injectable
-{{/isHydrated}}
-class {{#pascalCase}}{{name}}{{/pascalCase}}Cubit extends Cubit<{{#pascalCase}}{{name}}{{/pascalCase}}State> {{#isHydrated}}with HydratedMixin {{/isHydrated}}{
-  {{#pascalCase}}{{name}}{{/pascalCase}}Cubit(
-    @Named.from({{#pascalCase}}{{name}}{{/pascalCase}}Entity) this._{{#camelCase}}{{name}}{{/camelCase}}Repo,
-  ) : super(const {{#pascalCase}}{{name}}{{/pascalCase}}State.ready());
+class {{#pascalCase}}{{name}}{{/pascalCase}}Cubit extends {{#is_hydrated}}Cache{{/is_hydrated}}Cubit<{{#pascalCase}}{{name}}{{/pascalCase}}State>{
+  {{#pascalCase}}{{name}}{{/pascalCase}}Cubit() : super(const {{#pascalCase}}{{name}}{{/pascalCase}}State.loading());
 
-  // ignore: unused_field
-  final I{{#pascalCase}}{{name}}{{/pascalCase}}Repo _{{#camelCase}}{{name}}{{/camelCase}}Repo;
+  void init() async {}
 
-  void init(){}
 
-  {{#isHydrated}}
+  {{#is_hydrated}}
   @override
   {{#pascalCase}}{{name}}{{/pascalCase}}State? fromJson(Map<String, dynamic> json) =>
       {{#pascalCase}}{{name}}{{/pascalCase}}State.fromJson(json);
 
   @override
   Map<String, dynamic>? toJson({{#pascalCase}}{{name}}{{/pascalCase}}State state) => state.toJson();
-  {{/isHydrated}}
+  {{/is_hydrated}}
 }

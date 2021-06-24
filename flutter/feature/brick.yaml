@@ -1,6 +1,7 @@
 name: feature
-description: A new brick created with the Mason CLI.
+description: Creates a new feature, including application, infrastructure, domain, presentation, and features
 vars:
   - name
   - path
-  - isHydrated
+  - is_hydrated
+  - interface_name
