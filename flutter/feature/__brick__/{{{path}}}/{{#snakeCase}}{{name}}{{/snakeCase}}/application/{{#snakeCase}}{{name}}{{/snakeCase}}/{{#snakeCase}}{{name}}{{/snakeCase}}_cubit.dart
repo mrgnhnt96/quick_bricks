@@ -15,7 +15,9 @@ part '{{#snakeCase}}{{name}}{{/snakeCase}}_cubit.g.dart';
 class {{#pascalCase}}{{name}}{{/pascalCase}}Cubit extends {{#is_hydrated}}Cache{{/is_hydrated}}Cubit<{{#pascalCase}}{{name}}{{/pascalCase}}State>{
   {{#pascalCase}}{{name}}{{/pascalCase}}Cubit() : super(const {{#pascalCase}}{{name}}{{/pascalCase}}State.loading());
 
-  void init() async {}
+  void init() async {
+    emit(const {{#pascalCase}}{{name}}{{/pascalCase}}State.ready());
+  }
 
 
   {{#is_hydrated}}

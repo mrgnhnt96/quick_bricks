@@ -18,7 +18,9 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}Cubit extends {{#is_hydrated}}Cache{
   {{#isRepo}}@Named.from({{#pascalCase}}{{n}}{{/pascalCase}}Entity){{/isRepo}} this.{{#camelCase}}{{n}}{{/camelCase}}
   {{/dependencies}}) : super(const {{#pascalCase}}{{name}}{{/pascalCase}}State.loading());
 
-  void init() async {}
+  void init() async {
+    emit(const {{#pascalCase}}{{name}}{{/pascalCase}}State.ready());
+  }
 
 
   {{#is_hydrated}}
