@@ -5,8 +5,8 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}State with _${{#pascalCase}}{{name}}
   const {{#pascalCase}}{{name}}{{/pascalCase}}._();
 
   const factory {{#pascalCase}}{{name}}{{/pascalCase}}State.loading() = _Loading;
-  const factory {{#pascalCase}}{{name}}{{/pascalCase}}State.loading() = _Ready;
-  const factory {{#pascalCase}}{{name}}{{/pascalCase}}State.loading() = _Error;
+  const factory {{#pascalCase}}{{name}}{{/pascalCase}}State.ready() = _Ready;
+  const factory {{#pascalCase}}{{name}}{{/pascalCase}}State.error() = _Error;
   {{#is_hydrated}}
 
   factory {{#pascalCase}}{{name}}{{/pascalCase}}State.fromJson(Map<String, dynamic> json) =>
