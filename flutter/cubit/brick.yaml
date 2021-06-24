@@ -4,3 +4,8 @@ vars:
   - name
   - is_hydrated
   - path
+  # - dependencies
+  # dependencies = {
+  # n: <name of dependency>
+  # isRepo: <boolean>
+  # }
