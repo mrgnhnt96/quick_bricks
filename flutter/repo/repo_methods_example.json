@@ -1,0 +1,59 @@
+{
+  "methods": [
+    {
+      "returnType": "void",
+      "name": "Test",
+      "params": [
+        {
+          "name": "param1",
+          "type": "Type"
+        },
+        {
+          "start": "{",
+          "name": "param2",
+          "type": "Type",
+          "isRequired": true,
+          "isNamed": true,
+          "end": "}"
+        }
+      ]
+    },
+    {
+      "returnType": "void",
+      "name": "Test2",
+      "params": [
+        {
+          "start": "{",
+          "name": "param1",
+          "type": "Type",
+          "isRequired": false,
+          "isNamed": true
+        },
+        {
+          "name": "param2",
+          "type": "Type",
+          "isRequired": true,
+          "isNamed": true,
+          "end": "}"
+        }
+      ]
+    },
+    {
+      "returnType": "User?",
+      "name": "Test3",
+      "params": [
+        {
+          "name": "param1",
+          "type": "Type?"
+        },
+        {
+          "start": "[",
+          "name": "param2",
+          "type": "bool",
+          "defaultValue": "false",
+          "end": "]"
+        }
+      ]
+    }
+  ]
+}
