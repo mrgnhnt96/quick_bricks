@@ -5,7 +5,7 @@ part of '{{#snakeCase}}{{name}}{{/snakeCase}}_entity.dao.dart';
 class {{#pascalCase}}{{name}}{{/pascalCase}}Cache extends I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Cache {
   {{#methods}}
   @override
-  Future<{{returnType}}> {{#camelCase}}{{name}}{{/camelCase}}({{#params}}{{start}}{{#isRequired}}required {{/isRequired}}{{type}} {{#camelCase}}{{name}}{{/camelCase}}, {{end}}{{/params}}) async {
+  {{returnType}} {{#camelCase}}{{name}}{{/camelCase}}({{#params}}{{start}}{{#isRequired}}required {{/isRequired}}{{type}} {{#camelCase}}{{name}}{{/camelCase}}{{#defaultValue}} = {{defaultValue}}{{/defaultValue}}, {{end}}{{/params}}) async {
     throw UnimplementedError('{{#camelCase}}{{name}}{{/camelCase}} has not been implemented!');
   }
 

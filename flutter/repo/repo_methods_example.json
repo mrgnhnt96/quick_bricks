@@ -1,7 +1,7 @@
 {
   "methods": [
     {
-      "returnType": "void",
+      "returnType": "Future<void>",
       "name": "Test",
       "params": [
         {
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "returnType": "void",
+      "returnType": "Future<void>",
       "name": "Test2",
       "params": [
         {
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "returnType": "User?",
+      "returnType": "Stream<User?>",
       "name": "Test3",
       "params": [
         {
