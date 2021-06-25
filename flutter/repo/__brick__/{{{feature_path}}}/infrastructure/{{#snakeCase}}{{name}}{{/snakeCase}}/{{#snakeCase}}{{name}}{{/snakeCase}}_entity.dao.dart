@@ -15,4 +15,10 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}Entity extends I{{#pascalCase}}{{int
     @Named.from({{#pascalCase}}{{name}}{{/pascalCase}}Source) I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Source _source,
     Logger _logger,
   ): super(_cache, _source, _logger);
+
+  {{#methods}}
+  @override
+  Future<{{returnType}}> {{#camelCase}}{{name}}{{/camelCase}}({{#params}}{{start}}{{#isRequired}}required {{/isRequired}}{{type}} {{name}}, {{end}}{{/params}}) => logger.future(() => source.{{#camelCase}}{{name}}{{/camelCase}}({{#params}}{{#isNamed}}{{name}}: {{/isNamed}}{{name}}, {{/params}}));
+
+  {{/methods}}
 }

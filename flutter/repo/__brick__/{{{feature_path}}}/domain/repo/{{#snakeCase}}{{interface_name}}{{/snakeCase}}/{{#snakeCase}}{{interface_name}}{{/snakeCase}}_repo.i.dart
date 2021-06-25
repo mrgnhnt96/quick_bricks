@@ -1,6 +1,12 @@
 import 'package:clean_simple_eats/infrastructure/repo_logger/logger.dart';
 
-abstract class I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Repo {}
+abstract class I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Repo {
+  {{#methods}}
+  @override
+  Future<{{returnType}}> {{#camelCase}}{{name}}{{/camelCase}}({{#params}}{{start}}{{#isRequired}}required {{/isRequired}}{{type}} {{#camelCase}}{{name}}{{/camelCase}}, {{end}}{{/params}});
+
+  {{/methods}}
+}
 
 abstract class I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Entity implements I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Repo {
   I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Entity(

@@ -4,3 +4,4 @@ vars:
   - name
   - feature_path
   - interface_name
+  - methods
