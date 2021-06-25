@@ -18,7 +18,7 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}Entity extends I{{#pascalCase}}{{int
 
   {{#methods}}
   @override
-  {{{returnType}}} {{#camelCase}}{{name}}{{/camelCase}}({{#params}}{{start}}{{#isRequired}}required {{/isRequired}}{{type}} {{name}}{{#defaultValue}} = {{defaultValue}}{{/defaultValue}}, {{end}}{{/params}}) => logger.future(() => source.{{#camelCase}}{{name}}{{/camelCase}}({{#params}}{{#isNamed}}{{name}}: {{/isNamed}}{{name}}, {{/params}}));
+  {{{returnType}}} {{#camelCase}}{{name}}{{/camelCase}}({{#params}}{{start}}{{#isRequired}}required {{/isRequired}}{{{type}}} {{name}}{{#defaultValue}} = {{{defaultValue}}}{{/defaultValue}}, {{end}}{{/params}}) => logger.future(() => source.{{#camelCase}}{{name}}{{/camelCase}}({{#params}}{{#isNamed}}{{name}}: {{/isNamed}}{{name}}, {{/params}}));
 
   {{/methods}}
 }
