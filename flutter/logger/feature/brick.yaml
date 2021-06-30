@@ -1,0 +1,7 @@
+name: feature
+description: Generates a new feature, including application, infrastructure, domain (models & repos), presentation, and features
+vars:
+  - name
+  - path
+  - is_hydrated
+  - interface_name
