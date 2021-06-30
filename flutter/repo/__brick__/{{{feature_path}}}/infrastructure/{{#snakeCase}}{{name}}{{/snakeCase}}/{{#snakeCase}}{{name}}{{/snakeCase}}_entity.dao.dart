@@ -1,6 +1,4 @@
 // ignore_for_file: unused_field,unnecessary_lambdas
-import 'package:clean_simple_eats/infrastructure/repo_logger/logger.dart';
-import 'package:clean_simple_eats/infrastructure/firebase/i_firebase.dart';
 import 'package:injectable/injectable.dart';
 
 import '../../domain/repo/{{#snakeCase}}{{interface_name}}{{/snakeCase}}/{{#snakeCase}}{{interface_name}}{{/snakeCase}}_repo.i.dart';
@@ -14,12 +12,11 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}Entity extends I{{#pascalCase}}{{int
   {{#pascalCase}}{{name}}{{/pascalCase}}Entity(
     @Named.from({{#pascalCase}}{{name}}{{/pascalCase}}Cache) I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Cache _cache,
     @Named.from({{#pascalCase}}{{name}}{{/pascalCase}}Source) I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Source _source,
-    Logger _logger,
-  ): super(_cache, _source, _logger);
+  ): super(_cache, _source);
 
   {{#methods}}
   @override
-  {{{returnType}}} {{#camelCase}}{{name}}{{/camelCase}}({{#params}}{{start}}{{#isRequired}}required {{/isRequired}}{{{type}}} {{name}}{{#defaultValue}} = {{{defaultValue}}}{{/defaultValue}}, {{end}}{{/params}}) => logger.future(() => source.{{#camelCase}}{{name}}{{/camelCase}}({{#params}}{{#isNamed}}{{name}}: {{/isNamed}}{{name}}, {{/params}}));
+  {{{returnType}}} {{#camelCase}}{{name}}{{/camelCase}}({{#params}}{{start}}{{#isRequired}}required {{/isRequired}}{{{type}}} {{name}}{{#defaultValue}} = {{{defaultValue}}}{{/defaultValue}}, {{end}}{{/params}}) => source.{{#camelCase}}{{name}}{{/camelCase}}({{#params}}{{#isNamed}}{{name}}: {{/isNamed}}{{name}}, {{/params}});
 
   {{/methods}}
 }

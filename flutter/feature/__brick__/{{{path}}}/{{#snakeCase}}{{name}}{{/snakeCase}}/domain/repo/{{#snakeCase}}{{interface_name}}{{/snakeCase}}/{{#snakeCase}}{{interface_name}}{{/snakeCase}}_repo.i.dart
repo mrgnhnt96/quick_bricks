@@ -1,19 +1,20 @@
-import 'package:clean_simple_eats/infrastructure/repo_logger/logger.dart';
+abstract class I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Repo {
+  {{#methods}}
+  {{{returnType}}} {{#camelCase}}{{name}}{{/camelCase}}({{#params}}{{start}}{{#isRequired}}required {{/isRequired}}{{{type}}} {{#camelCase}}{{name}}{{/camelCase}}{{#defaultValue}} = {{{defaultValue}}}{{/defaultValue}}, {{end}}{{/params}});
 
-abstract class I{{#pascalCase}}{{name}}{{/pascalCase}}Repo {}
-
-abstract class I{{#pascalCase}}{{name}}{{/pascalCase}}Entity implements I{{#pascalCase}}{{name}}{{/pascalCase}}Repo {
-  I{{#pascalCase}}{{name}}{{/pascalCase}}Entity(
-    this.cache,
-    this.source,
-    this.logger,
-  );
-
-  final I{{#pascalCase}}{{name}}{{/pascalCase}}Cache cache;
-  final I{{#pascalCase}}{{name}}{{/pascalCase}}Source source;
-  final Logger logger;
+  {{/methods}}
 }
 
-abstract class I{{#pascalCase}}{{name}}{{/pascalCase}}Cache implements I{{#pascalCase}}{{name}}{{/pascalCase}}Repo {}
+abstract class I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Entity implements I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Repo {
+  I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Entity(
+    this.cache,
+    this.source,
+  );
 
-abstract class I{{#pascalCase}}{{name}}{{/pascalCase}}Source implements I{{#pascalCase}}{{name}}{{/pascalCase}}Repo {}
+  final I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Cache cache;
+  final I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Source source;
+}
+
+abstract class I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Cache implements I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Repo {}
+
+abstract class I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Source implements I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Repo {}
