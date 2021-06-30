@@ -12,19 +12,35 @@ class MyRepoEntity extends IRepoNameEntity {
   MyRepoEntity(
     @Named.from(MyRepoCache) IRepoNameCache _cache,
     @Named.from(MyRepoSource) IRepoNameSource _source,
-  ): super(_cache, _source);
+  ) : super(_cache, _source);
 
-  
   @override
-  Future<void> myMethodOne(Type firstParam, {required Type param2, }) => source.myMethodOne(firstParam, param2: param2, );
+  Future<void> myMethodOne(
+    Type firstParam, {
+    required Type param2,
+  }) =>
+      source.myMethodOne(
+        firstParam,
+        param2: param2,
+      );
 
-  
   @override
-  Future<List<Info>> myMethodTwo({Type param1 = defaultValue, required Type param2, }) => source.myMethodTwo(param1: param1, param2: param2, );
+  Future<List<Info>> myMethodTwo({
+    Type param1 = defaultValue,
+    required Type param2,
+  }) =>
+      source.myMethodTwo(
+        param1: param1,
+        param2: param2,
+      );
 
-  
   @override
-  Stream<User?> myMethodThree(Type? param1, [bool param2 = false, ]) => source.myMethodThree(param1, param2, );
-
-  
+  Stream<User?> myMethodThree(
+    Type? param1, [
+    bool param2 = false,
+  ]) =>
+      source.myMethodThree(
+        param1,
+        param2,
+      );
 }

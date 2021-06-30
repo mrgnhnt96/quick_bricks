@@ -12,7 +12,5 @@ class MyFeatureEntity extends IFeatureNameEntity {
   MyFeatureEntity(
     @Named.from(MyFeatureCache) IFeatureNameCache _cache,
     @Named.from(MyFeatureSource) IFeatureNameSource _source,
-  ): super(_cache, _source);
-
-  
+  ) : super(_cache, _source);
 }
