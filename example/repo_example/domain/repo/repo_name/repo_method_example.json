@@ -1,0 +1,60 @@
+{
+  "interface_name": "repo name",
+  "methods": [
+    {
+      "returnType": "Future<void>",
+      "name": "myMethodOne",
+      "params": [
+        {
+          "name": "firstParam",
+          "type": "Type"
+        },
+        {
+          "start": "{",
+          "name": "param2",
+          "type": "Type",
+          "isRequired": true,
+          "isNamed": true,
+          "end": "}"
+        }
+      ]
+    },
+    {
+      "returnType": "Future<List<Info>>",
+      "name": "myMethodTwo",
+      "params": [
+        {
+          "start": "{",
+          "name": "param1",
+          "type": "Type",
+          "defaultValue": "defaultValue",
+          "isNamed": true
+        },
+        {
+          "name": "param2",
+          "type": "Type",
+          "isRequired": true,
+          "isNamed": true,
+          "end": "}"
+        }
+      ]
+    },
+    {
+      "returnType": "Stream<User?>",
+      "name": "myMethodThree",
+      "params": [
+        {
+          "name": "param1",
+          "type": "Type?"
+        },
+        {
+          "start": "[",
+          "name": "param2",
+          "type": "bool",
+          "defaultValue": "false",
+          "end": "]"
+        }
+      ]
+    }
+  ]
+}
