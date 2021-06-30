@@ -2,3 +2,4 @@ analyzer:
   exclude:
     - "flutter/**"
     - "bricks/**"
+    - "example/**"
