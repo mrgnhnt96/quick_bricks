@@ -1,4 +1,4 @@
 {
-  "interface_name": "{{#snakeCase}}{{interface_name}}{{/snakeCase}}",
+  "interface_name": "{{interface_name}}",
   "methods": []
 }

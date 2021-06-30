@@ -1,8 +1,7 @@
 abstract class I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Repo {
-  {{#methods}}
+{{#methods}}
   {{{returnType}}} {{#camelCase}}{{name}}{{/camelCase}}({{#params}}{{start}}{{#isRequired}}required {{/isRequired}}{{{type}}} {{#camelCase}}{{name}}{{/camelCase}}{{#defaultValue}} = {{{defaultValue}}}{{/defaultValue}}, {{end}}{{/params}});
-
-  {{/methods}}
+{{/methods}}
 }
 
 abstract class I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Entity implements I{{#pascalCase}}{{interface_name}}{{/pascalCase}}Repo {

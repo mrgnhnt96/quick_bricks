@@ -20,6 +20,5 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}Cubit extends Cubit<{{#pascalCase}}{
       {{#pascalCase}}{{name}}{{/pascalCase}}State.fromJson(json);
 
   @override
-  Map<String, dynamic>? toJson({{#pascalCase}}{{name}}{{/pascalCase}}State state) => state.toJson();
-{{/isHydrated}}
+  Map<String, dynamic>? toJson({{#pascalCase}}{{name}}{{/pascalCase}}State state) => state.toJson();{{/isHydrated}}
 }
