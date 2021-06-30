@@ -3,6 +3,9 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';{{/is_hydrated}}
 import 'package:injectable/injectable.dart';
 import 'package:bloc/bloc.dart';
 
+import '../../domain/repo/{{#snakeCase}}{{name}}{{/snakeCase}}/{{#snakeCase}}{{name}}{{/snakeCase}}_repo.i.dart';
+import '../../infrastructure/{{#snakeCase}}{{name}}{{/snakeCase}}/{{#snakeCase}}{{name}}{{/snakeCase}}_entity.dao.dart';
+
 part '{{#snakeCase}}{{name}}{{/snakeCase}}_state.dart';
 part '{{#snakeCase}}{{name}}{{/snakeCase}}_cubit.freezed.dart';{{#is_hydrated}}
 part '{{#snakeCase}}{{name}}{{/snakeCase}}_cubit.g.dart';{{/is_hydrated}}
