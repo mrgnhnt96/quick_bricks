@@ -1,5 +1,5 @@
-// TODO: ADD "isCache", "isSource"
 {
+  "interface_name": "repo name",
   "methods": [
     {
       "returnType": "Future<void>",
