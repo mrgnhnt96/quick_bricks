@@ -1,6 +1,4 @@
 // ignore_for_file: unused_field,unnecessary_lambdas
-import 'package:clean_simple_eats/infrastructure/repo_logger/logger.dart';
-import 'package:clean_simple_eats/infrastructure/firebase/i_firebase.dart';
 import 'package:injectable/injectable.dart';
 
 import '../../domain/repo/{{#snakeCase}}{{interface_name}}{{/snakeCase}}/{{#snakeCase}}{{interface_name}}{{/snakeCase}}_repo.i.dart';
