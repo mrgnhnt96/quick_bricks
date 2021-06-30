@@ -11,7 +11,7 @@ part '{{#snakeCase}}{{name}}{{/snakeCase}}_cubit.freezed.dart';{{#is_hydrated}}
 part '{{#snakeCase}}{{name}}{{/snakeCase}}_cubit.g.dart';{{/is_hydrated}}
 
 @injectable
-class {{#pascalCase}}{{name}}{{/pascalCase}}Cubit extends Cubit<{{#pascalCase}}{{name}}{{/pascalCase}}State> {{#isHydrated}} with HydratedMixin {{/isHydrated}}{
+class {{#pascalCase}}{{name}}{{/pascalCase}}Cubit extends Cubit<{{#pascalCase}}{{name}}{{/pascalCase}}State> {{#isHydrated}}with HydratedMixin {{/isHydrated}}{
   {{#pascalCase}}{{name}}{{/pascalCase}}Cubit(
     @Named.from({{#pascalCase}}{{name}}{{/pascalCase}}Entity) this._{{#camelCase}}{{name}}{{/camelCase}}Repo,
   ) : super(const {{#pascalCase}}{{name}}{{/pascalCase}}State.loading());
