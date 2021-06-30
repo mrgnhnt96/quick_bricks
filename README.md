@@ -15,6 +15,15 @@ feature:
     path: flutter/feature
 ```
 
+*You can also use the following to use `Logger` by default*
+
+```yaml
+repo:
+  git:
+    url: git@github.com:mrgnhnt96/quick_bricks.git
+    path: flutter/logger/feature
+```
+
 Params:
 
 - name
@@ -97,6 +106,15 @@ repo:
   git:
     url: git@github.com:mrgnhnt96/quick_bricks.git
     path: flutter/repo
+```
+
+*You can also use the following to use `Logger` by default*
+
+```yaml
+repo:
+  git:
+    url: git@github.com:mrgnhnt96/quick_bricks.git
+    path: flutter/logger/repo
 ```
 
 ### How to
