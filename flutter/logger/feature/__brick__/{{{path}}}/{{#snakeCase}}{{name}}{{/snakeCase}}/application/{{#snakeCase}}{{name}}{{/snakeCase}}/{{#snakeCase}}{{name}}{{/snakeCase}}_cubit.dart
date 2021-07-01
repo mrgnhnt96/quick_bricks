@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:bloc/bloc.dart';{{^is_hydrated}}
+{{^is_hydrated}}import 'package:bloc/bloc.dart';{{/is_hydrated}}{{#is_hydrated}}
 import 'package:hydrated_bloc/hydrated_bloc.dart';{{/is_hydrated}}
 
 import '../../domain/repo/{{#snakeCase}}{{name}}{{/snakeCase}}/{{#snakeCase}}{{name}}{{/snakeCase}}_repo.i.dart';
