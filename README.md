@@ -18,7 +18,7 @@ feature:
 *You can also use the following to use `Logger` by default*
 
 ```yaml
-repo:
+feature:
   git:
     url: git@github.com:mrgnhnt96/quick_bricks.git
     path: flutter/logger/feature
@@ -158,7 +158,7 @@ Params:
 Import to mason.yaml:
 
 ```yaml
-repo:
+model:
   git:
     url: git@github.com:mrgnhnt96/quick_bricks.git
     path: flutter/model
